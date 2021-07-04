@@ -1,8 +1,9 @@
 #include <iostream>
 
 #include "math.hpp"
-#include "to_string_test.hpp"
-#include "is_palindrome.hpp"
+#include "int_to_string.hpp"
+#include "palindrome.hpp"
+#include "romaToInt.hpp"
 
 int main(int argc, const char* argv[]) {
     for (int i = 1; i < argc; i++) {
@@ -11,6 +12,8 @@ int main(int argc, const char* argv[]) {
     //toStringTest();
     int x;
     std::cin >> x ;
-    std::cout << isPalindrome(x) << std::endl;
-    return 0;
+    std::cout << IsPalindrome(x) << std::endl;
+    Solution roma;
+    x = roma.RomanToInt("III");
+    return x;
 }
