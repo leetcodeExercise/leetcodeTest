@@ -6,11 +6,11 @@ class Solution {
 
 public:
     Solution();
-    int RomanToInt(std::string s) {
+    int RomanToInt(const std::string& s) {
         int x = 0;
         for (int i = 0; i < s.length(); i++) {
             int value = roma_[s[i]];
-            (value < roma_[s[i+1]]) && (i < s.length() - 1) ? 
+            (value < roma_[s[i + 1]]) && (i < s.length() - 1) ? 
                 x = x - value : x = x + value;
         }
     }
